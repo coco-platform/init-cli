@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@types/node@^8.5.2":
-  version "8.10.9"
-  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-8.10.9.tgz#b507a74a7d3eddc74a17dc35fd40d8f45dde0d6c"
-
 abab@^1.0.3:
   version "1.0.4"
   resolved "http://registry.npm.taobao.org/abab/download/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
