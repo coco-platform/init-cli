@@ -1,0 +1,15 @@
+apps:
+  - name: name.pm2.io # replace with your own
+    script: src/main.js
+deploy:
+  production:
+    user: someone # replace with your own
+    host:
+      - 192.168.0.1  # replace with your own
+    ref: origin/master
+    repo: git@github.com:coco-template/node-starter.git # replace with your own
+    path: /home/centos/ # replace with your own
+#    pre-deploy-local: "tsc --watch false"
+    post-deploy: "yarn && pm2 startOrRestart pm2.yml --env production"
+    env:
+      NODE_ENV: production

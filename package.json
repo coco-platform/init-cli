@@ -1,0 +1,50 @@
+{
+  "name": "node-starter",
+  "version": "0.1.0",
+  "description":
+    "A lite seed project for server-side applications with nestjs.",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "precommit": "pretty-quick --staged",
+    "deploy": "pm2 deploy pm2.yml production",
+    "test": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coco-template/node-starter.git"
+  },
+  "keywords": ["babel", "plugin"],
+  "author": "huang.jian <hjj491229492@hotmail.com>",
+  "contributors": [
+    {
+      "name": "huang.jian",
+      "email": "hjj491229492@hotmail.com"
+    },
+    {
+      "name": "yang.yuncai",
+      "email": "383235388@qq.com"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coco-template/nest-starter/issues"
+  },
+  "homepage": "https://github.com/coco-template/nest-starter#README",
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
+  },
+  "dependencies": {}
+}
