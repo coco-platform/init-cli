@@ -6,6 +6,7 @@ const { welcome } = require('@coco-platform/tools');
 // internal
 const packager = require('../package.json');
 const InitCore = require('../lib');
+const { handlePromiseRejection } = require('../lib/tool');
 
 // variables
 program
@@ -21,9 +22,13 @@ program
     };
     const core = new InitCore(options);
 
-    await welcome();
-    await core.request();
-    await core.render();
+    try {
+      await welcome();
+      await core.request();
+      await core.render();
+    } catch (err) {
+      handlePromiseRejection(err);
+    }
   });
 
 program.parse(process.argv);
