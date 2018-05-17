@@ -1,6 +1,6 @@
 {
   "name": "@coco-platform/init-cli",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A cli to init project with coco-template.",
   "main": "lib/index.js",
   "engines": {
