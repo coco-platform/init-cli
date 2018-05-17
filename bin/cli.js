@@ -12,21 +12,22 @@ const { handlePromiseRejection } = require('../lib/tool');
 program
   .version(packager.version)
   .arguments('<project> <template>')
-  .option('-k, --skip-install', 'skip install node package')
-  .option('-g, --skip-git', 'skip git init operation')
-  .option('-w, --skip-welcome', 'skip output usage info')
+  .option('-k, --no-npm', 'skip install node package')
+  .option('-g, --no-git', 'skip git init operation')
+  .option('-w, --no-welcome', 'skip output usage info')
   .action(async (project, template) => {
     const options = {
       project,
       template,
     };
     const core = new InitCore(options);
+    const showWelcome = program.welcome;
 
     try {
-      await welcome();
+      await welcome(showWelcome);
       await core.request();
       await core.render();
-      await core.initGitRepo();
+      await core.initGit();
     } catch (err) {
       handlePromiseRejection(err);
     }

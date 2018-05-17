@@ -16,10 +16,11 @@ Usage: coco-init [options] <project> <template>
 
 Options:
 
-  -V, --version       output the version number
-  -k, --skip-npm      skip install node package
-  -g, --skip-git      skip git init operation
-  -h, --help          output usage information
+  -V, --version     output the version number
+  -k, --no-npm      skip install node package
+  -g, --no-git      skip git init operation
+  -w, --no-welcome  skip output usage info
+  -h, --help        output usage information
 ```
 
 ## License
