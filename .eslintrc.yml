@@ -1,6 +1,6 @@
 # eslint configuration
 parserOptions:
-  ecmaVersion: 6
+  ecmaVersion: 2017
   sourceType: module
   ecmaFeatures:
     # support redux shallow copy
@@ -28,6 +28,7 @@ rules:
   quotes:
     - error
     - single
+    - allowTemplateLiterals: true
   semi:
     - error
     - always

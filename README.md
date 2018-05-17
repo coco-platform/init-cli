@@ -1,16 +1,27 @@
-# node-start
+# @coco-platform/init-cli
 
-A lite seed project for applications with nodejs.
+A tool to init project from available templates.
 
 ## Usage
 
 ```shell
-# nodemon restart after change
-npm run dev;
-# deploy
-npm run deploy;
+# npm
+npm install -g @coco-platform/init-cli
+# yarn
+yarn add global @coco-platform/init-cli;
 ```
 
-# Licence
+```
+Usage: coco-init [options] <project> <template>
 
-Project under [MIT Licence](https://github.com/facebook/react/blob/master/LICENSE)
+Options:
+
+  -V, --version       output the version number
+  -k, --skip-npm      skip install node package
+  -g, --skip-git      skip git init operation
+  -h, --help          output usage information
+```
+
+## License
+
+MIT

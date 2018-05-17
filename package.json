@@ -1,21 +1,22 @@
 {
-  "name": "node-starter",
-  "version": "0.1.0",
-  "description":
-    "A lite seed project for server-side applications with nestjs.",
-  "main": "src/index.js",
+  "name": "@coco-platform/init-cli",
+  "version": "0.2.0",
+  "description": "A cli to init project with coco-template.",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=8.0.0"
   },
+  "bin": {
+    "coco-init": "./bin/cli.js"
+  },
   "scripts": {
     "precommit": "pretty-quick --staged",
-    "deploy": "pm2 deploy pm2.yml production",
-    "test": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/coco-template/node-starter.git"
+    "url": "git+ssh://git@github.com/coco-platform/init-cli.git"
   },
   "keywords": ["babel", "plugin"],
   "author": "huang.jian <hjj491229492@hotmail.com>",
@@ -31,9 +32,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/coco-template/nest-starter/issues"
+    "url": "https://github.com/coco-platform/init-cli/issues"
   },
-  "homepage": "https://github.com/coco-template/nest-starter#README",
+  "homepage": "https://github.com/coco-platform/init-cli#README",
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -46,5 +47,17 @@
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@coco-platform/tools": "^0.4.6",
+    "camelcase": "^5.0.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2",
+    "email-validator": "^2.0.3",
+    "handlebars": "^4.0.11",
+    "inquirer": "^5.2.0",
+    "ora": "^2.1.0",
+    "validate-npm-package-name": "^3.0.0",
+    "yamljs": "^0.3.0"
+  }
 }
