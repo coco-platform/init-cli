@@ -26,6 +26,7 @@ program
       await welcome();
       await core.request();
       await core.render();
+      await core.initGitRepo();
     } catch (err) {
       handlePromiseRejection(err);
     }

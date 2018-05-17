@@ -57,6 +57,7 @@
     "handlebars": "^4.0.11",
     "inquirer": "^5.2.0",
     "ora": "^2.1.0",
+    "shelljs": "^0.8.2",
     "validate-npm-package-name": "^3.0.0",
     "yamljs": "^0.3.0"
   }
