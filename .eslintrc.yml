@@ -40,3 +40,4 @@ rules:
   react/sort-comp: off
   function-paren-newline: off
   object-curly-newline: off
+  no-confusing-arrow: off

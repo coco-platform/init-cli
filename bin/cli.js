@@ -6,7 +6,7 @@ const { welcome } = require('@coco-platform/tools');
 // internal
 const packager = require('../package.json');
 const InitCore = require('../lib');
-const { handlePromiseRejection } = require('../lib/tool');
+const { handlePromiseRejection } = require('../lib/tools');
 
 // variables
 program
