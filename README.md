@@ -1,4 +1,4 @@
-# @coco-platform/init-cli
+# @coco-platform/init
 
 A tool to init project from coco templates https://github.com/coco-template.
 
