@@ -19,8 +19,8 @@
     "url": "git+ssh://git@github.com/coco-platform/init-cli.git"
   },
   "keywords": [
-    "babel",
-    "plugin"
+    "scaffold",
+    "coco"
   ],
   "author": "huang.jian <hjj491229492@hotmail.com>",
   "contributors": [
@@ -39,13 +39,13 @@
   },
   "homepage": "https://github.com/coco-platform/init-cli#README",
   "devDependencies": {
-    "eslint": "^4.9.0",
-    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
     "husky": "^0.14.3",
-    "jest": "^20.0.4",
+    "jest": "^23.5.0",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
@@ -59,9 +59,9 @@
     "email-validator": "^2.0.3",
     "glob": "^7.1.2",
     "handlebars": "^4.0.11",
-    "inquirer": "^5.2.0",
+    "inquirer": "^6.1.0",
     "lodash": "^4.17.10",
-    "ora": "^2.1.0",
+    "ora": "^3.0.0",
     "shelljs": "^0.8.2",
     "validate-npm-package-name": "^3.0.0",
     "yamljs": "^0.3.0"
