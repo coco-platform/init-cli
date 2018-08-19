@@ -9,6 +9,10 @@
   "bin": {
     "coco-init": "./bin/cli.js"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "scripts": {
     "precommit": "pretty-quick --staged",
     "test": "jest --coverage",
