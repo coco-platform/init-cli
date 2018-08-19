@@ -1,14 +1,14 @@
 # @coco-platform/init-cli
 
-A tool to init project from available templates.
+A tool to init project from coco templates https://github.com/coco-template.
 
 ## Usage
 
 ```shell
 # npm
-npm install -g @coco-platform/init-cli
+npm install -g @coco-platform/init
 # yarn
-yarn add global @coco-platform/init-cli;
+yarn add global @coco-platform/init;
 ```
 
 ```
