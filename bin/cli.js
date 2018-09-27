@@ -28,6 +28,7 @@ program
       await lifecycle.check(destiny);
       const template = await lifecycle.choose();
       await lifecycle.download(template, destiny);
+      await lifecycle.render(destiny, template);
       await lifecycle.setup(destiny);
       await lifecycle.success();
     } catch (err) {
