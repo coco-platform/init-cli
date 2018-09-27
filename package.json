@@ -61,13 +61,12 @@
     "commander": "^2.15.1",
     "download-git-repo": "^1.0.2",
     "email-validator": "^2.0.3",
-    "glob": "^7.1.2",
-    "handlebars": "^4.0.11",
+    "fs-extra": "^7.0.0",
     "inquirer": "^6.1.0",
     "lodash": "^4.17.10",
     "ora": "^3.0.0",
     "shelljs": "^0.8.2",
-    "validate-npm-package-name": "^3.0.0",
-    "yamljs": "^0.3.0"
+    "superagent": "^4.0.0-beta.5",
+    "validate-npm-package-name": "^3.0.0"
   }
 }

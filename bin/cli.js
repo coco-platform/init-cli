@@ -1,36 +1,41 @@
 #!/usr/bin/env node
 
-// external
+// packages
+const path = require('path');
 const program = require('commander');
+const chalk = require('chalk');
 const { welcome } = require('@coco-platform/tools');
-// internal
-const packager = require('../package.json');
-const InitCore = require('../lib');
-const { handlePromiseRejection } = require('../lib/tools');
+const lifecycle = require('../lib/lifecycle');
+const { version } = require('../package.json');
 
-// variables
+/* eslint-disable no-console */
 program
-  .version(packager.version)
-  .arguments('<project> <template>')
-  .option('-k, --no-npm', 'skip install node package')
+  .version(version)
+  .arguments('<project>')
+  .option(
+    '-r, --registry <registry>',
+    'specific npm registry',
+    /^https?:\/\/[a-z.]+\/?$/,
+    'https://registry.npmjs.org/'
+  )
+  .option('-s, --no-install', 'skip install node package')
   .option('-g, --no-git', 'skip git init operation')
-  .option('-w, --no-welcome', 'skip output usage info')
-  .action(async (project, template) => {
-    const options = {
-      project,
-      template,
-    };
-    const core = new InitCore(options);
-    const showWelcome = program.welcome;
-
+  .action(async (project) => {
     try {
-      await welcome(showWelcome);
-      await core.request();
-      await core.render();
-      await core.initGit();
+      const destiny = path.resolve(process.cwd(), project);
+
+      await welcome(true);
+      await lifecycle.check(destiny);
+      const template = await lifecycle.choose();
+      await lifecycle.download(template, destiny);
+      await lifecycle.setup(destiny);
+      await lifecycle.success();
     } catch (err) {
-      handlePromiseRejection(err);
+      console.log();
+      console.log(` ${chalk.cyan('coco-cli:')} ${chalk.red(err)}`);
+      console.log();
     }
   });
+/* eslint-enable no-console */
 
 program.parse(process.argv);
