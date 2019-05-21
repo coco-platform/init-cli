@@ -1,5 +1,7 @@
 # @coco-platform/init-cli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/coco-platform/init-cli.svg)](https://greenkeeper.io/)
+
 A tool to init project from coco templates https://github.com/coco-template.
 
 ## Usage
