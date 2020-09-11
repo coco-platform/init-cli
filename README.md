@@ -12,14 +12,12 @@ yarn add global @coco-platform/init;
 ```
 
 ```
-Usage: coco-init [options] <project> <template>
+Usage: coco-init [options] <project>
 
 Options:
-
   -V, --version     output the version number
-  -k, --no-npm      skip install node package
-  -g, --no-git      skip git init operation
-  -w, --no-welcome  skip output usage info
+  -g, --no-proxy    ignore *-proxy environment variables
+  -i, --no-install  skip package install step
   -h, --help        output usage information
 ```
 
