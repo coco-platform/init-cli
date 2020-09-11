@@ -12,25 +12,29 @@ const { version } = require('../package.json');
 program
   .version(version)
   .arguments('<project>')
-  .option(
-    '-r, --registry <registry>',
-    'specific npm registry',
-    /^https?:\/\/[a-z.]+\/?$/,
-    'https://registry.npmjs.org/'
-  )
-  .option('-s, --no-install', 'skip install node package')
-  .option('-g, --no-git', 'skip git init operation')
+  .option('-g, --no-proxy', 'ignore *-proxy environment variables')
+  .option('-i, --no-install', 'skip package install step')
   .action(async (project) => {
     try {
+      console.log(program.proxy);
       const destiny = path.resolve(process.cwd(), project);
 
-      await welcome(true);
+      welcome(true);
+
       await lifecycle.check(destiny);
-      const template = await lifecycle.choose();
+
+      // download repo
+      const template = await lifecycle.choose(program.proxy);
+
       await lifecycle.download(template, destiny);
       await lifecycle.render(destiny);
-      await lifecycle.setup(destiny);
-      await lifecycle.success();
+
+      // post operatation
+      if (program.install) {
+        lifecycle.setup(destiny);
+      }
+
+      lifecycle.success();
     } catch (err) {
       console.log();
       console.log(` ${chalk.cyan('coco-cli:')} ${chalk.red(err)}`);
