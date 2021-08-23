@@ -65,9 +65,9 @@
     "inquirer": "^6.1.0",
     "needle": "^2.5.0",
     "ora": "^3.0.0",
-    "proxy-agent": "^3.1.1",
+    "proxy-agent": "^5.0.0",
     "shelljs": "^0.8.2",
-    "snyk": "^1.189.0",
+    "snyk": "^1.518.0",
     "validate-npm-package-name": "^3.0.0"
   },
   "husky": {
